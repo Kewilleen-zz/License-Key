@@ -36,7 +36,7 @@ Has a value in database, return format:
 
 ```json
 {
-  "server": "Test"
+  "server": "Test",
   "plugin": "KwLicense"
 }
 ```
