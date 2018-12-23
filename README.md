@@ -23,8 +23,8 @@ $license = new License();
 Call the `function` to check has a license by `IP` and `PORT` (need check isset IP and PORT)
 
 ```php
-if (!$l->hasLicense($_GET['ip'], $_GET['port'])) {
-	die('{"error":"IP/Port no has a license!"}');
+if (!$license->hasLicense($_GET['ip'], $_GET['port'])) {
+  die('{"error":"IP/Port no has a license!"}');
 }
 ```
 
