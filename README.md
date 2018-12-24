@@ -35,6 +35,16 @@ Connect a URL `http://yourwebsite.com/?ip=127.0.0.1&port=25565`
 #### Java
 
 ```java
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.URL;
+import java.net.URLConnection;
+
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
 try {
   String link = "http://yourwebsite.com/?ip=127.0.0.1&port=25565";
   URL url = new URL(link);
