@@ -30,7 +30,7 @@ if (!$license->hasLicense($_GET['ip'], $_GET['port'])) {
 
 ### Examples
 
-Connect a URL `http://localhost/license-key/?ip=127.0.0.1&port=25565`
+Connect a URL `http://yourwebsite.com/?ip=127.0.0.1&port=25565`
 
 #### Java
 
