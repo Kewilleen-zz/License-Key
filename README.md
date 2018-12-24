@@ -1,5 +1,5 @@
 # License-Key
-A plugin license key checker
+A simple plugin license key checker
 
 ### Installation
 Initialize the `header("Content-type: application/json; charset=utf-8");` in top your `index` to return a `JSON` format
@@ -31,6 +31,29 @@ if (!$license->hasLicense($_GET['ip'], $_GET['port'])) {
 ### Examples
 
 Connect a URL `http://localhost/license-key/?ip=127.0.0.1&port=25565`
+
+#### Java
+
+```java
+try {
+	String link = "http://yourwebsite.com/?ip=127.0.0.1&port=25565";
+	URL url = new URL(link);
+	URLConnection conn = url.openConnection(); //Open connection with the URL
+	BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+	JSONParser parse = new JSONParser(); //Instance parse information
+	JSONObject json = (JSONObject) parse.parse(br); //parse
+	br.close(); //close connection
+	boolean error = json.get("error") != null; //check has a error
+	if (error) {
+		System.out.println("A error has found! " + json.get("error"));
+		return;
+	}
+	String server = (String) json.get("server"); //parse the object Server to String
+	System.out.println("Welcome server " + server);
+	} catch (IOException | ParseException e) {
+	  System.out.println(e.getMessage());
+	}
+```
 
 Has a value in database, return format:
 
