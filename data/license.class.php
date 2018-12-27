@@ -1,5 +1,4 @@
 <?php
-date_default_timezone_set('America/Sao_Paulo');
 require 'data/mysql.class.php';
 /**
  * Gerenciador das classes
