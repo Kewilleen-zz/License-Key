@@ -10,10 +10,7 @@ Put `data/license.class.php` in your files and start de `class`
 
 Open the `config.php` and insert the data to connect in database
 ```php
-define('database_host', 'localhost');
-define('database_user', 'root');
-define('database_pass', '');
-define('database_name', 'test');
+define("mysql", array('host'=>'YOUR_HOST','user'=>'YOUR_USER', 'pass'=>'YOUR_PASS', 'db'=>'YOUR_DATABASE'));
 ```
 
 ```php
