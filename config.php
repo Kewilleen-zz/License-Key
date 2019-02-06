@@ -4,4 +4,4 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 /* Mysql configurations */
-define("mysql", array('host'=>'localhost','user'=>'root', 'pass'=>'', 'db'=>'test'));
+define("mysql", serialize(array('host'=>'localhost','user'=>'root', 'pass'=>'', 'db'=>'test')));
