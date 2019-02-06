@@ -25,6 +25,14 @@ class License extends MySQL {
 		return $result;
 	}
 
+	public function getIp() {
+		return $this->ip;
+	}
+	
+	public function getPort() {
+		return $this->port;
+	}
+	
 	public function getServer()	{
 		return $this->server;
 	}
