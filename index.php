@@ -6,7 +6,7 @@
 	require 'data/license.class.php';
 	$l = new License();
 	if (!$l->hasLicense($_GET['ip'], $_GET['port'])) {
-		die('{"error":"IP dont has a license!' . $l->getIp(); . ':' . $l->getPort(); .'"}');
+		die('{"error":"IP dont has a license!' . $l->getIp(); . ':' . $l->getPort() . '"}');
 	}
 	echo $l->getJSON();
 ?>
